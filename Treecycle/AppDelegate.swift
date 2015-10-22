@@ -16,7 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let userDefaults = NSUserDefaults.groupUserDefaults()
+        
+        if (!userDefaults.boolForKey(Constants.General.OnboardingShown.key())) {
+            loadOnboardingInterface()
+        } else {
+            loadMainInterface()
+        }
+
         return true
+    }
+    
+    func loadOnboardingInterface() {
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() {
+            self.window?.rootViewController = controller
+        }
+    }
+    
+    func loadMainInterface() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() {
+            self.window?.rootViewController = controller
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

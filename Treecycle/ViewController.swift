@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import AMWaveTransition
 
-class ViewController: UIViewController {
-
+class OnboardingViewController: AMWaveViewController {
+    
+    @IBOutlet var viewArray: [UIView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationController?.view.backgroundColor = UIColor.mainColor()
+        self.view.backgroundColor = UIColor.clearColor()
+        
+        updateUI()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func visibleCells() -> [AnyObject]! {
+        return self.viewArray
     }
-
-
+    
+    func updateUI() {
+        
+    }
+    
+    @IBAction func backAction() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }
-
