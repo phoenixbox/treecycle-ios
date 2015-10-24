@@ -6,7 +6,9 @@ inhibit_all_warnings!
 
 target 'Treecycle' do
 pod 'Alamofire', '~> 3.0'
+pod 'SwiftyJSON', '~> 2.3'
 pod 'AMWaveTransition', '~> 0.6'
+pod 'Stripe', '~> 6.0'
 end
 
 target 'TreecycleTests' do

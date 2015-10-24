@@ -13,6 +13,11 @@ public class Constants {
         return "REPL.Treecycle"
     }
     
+    public class func stripePublishableKey() -> String {
+        // If debug use one if prod use another
+        return "pk_test_wb9VmhiWW2nSZLP7v7fAmmzk"
+    }
+    
     public enum General: Int {
         case OnboardingShown
         

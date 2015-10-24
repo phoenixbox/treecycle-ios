@@ -7,17 +7,30 @@
 //
 
 import UIKit
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let StripePublishableKey = "pk_test_wb9VmhiWW2nSZLP7v7fAmmzk";
+    // Find this at https://dashboard.stripe.com/account/apikeys
+    static let stripePublishableKey = ""
+    // To set this up, see https://stripe.com/docs/mobile/apple-pay
+    static let appleMerchantId = ""
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+       Stripe.setDefaultPublishableKey(Constants.stripePublishableKey())
+        let authStore = AuthStore.sharedInstance
         let userDefaults = NSUserDefaults.groupUserDefaults()
+        
+        guard let _ = authStore.user as User? else {
+            loadLoginInterface()
+            return true
+        }
         
         if (!userDefaults.boolForKey(Constants.General.OnboardingShown.key())) {
             loadOnboardingInterface()
@@ -27,9 +40,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+    // Compose the dynamic loading of these Storyboards
     
     func loadOnboardingInterface() {
         let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() {
+            self.window?.rootViewController = controller
+        }
+    }
+    
+    func loadLoginInterface() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
         if let controller = storyboard.instantiateInitialViewController() {
             self.window?.rootViewController = controller
         }

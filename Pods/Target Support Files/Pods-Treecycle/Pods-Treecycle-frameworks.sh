@@ -86,8 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Treecycle/AMWaveTransition.framework"
   install_framework "Pods-Treecycle/Alamofire.framework"
+  install_framework "Pods-Treecycle/Stripe.framework"
+  install_framework "Pods-Treecycle/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Treecycle/AMWaveTransition.framework"
   install_framework "Pods-Treecycle/Alamofire.framework"
+  install_framework "Pods-Treecycle/Stripe.framework"
+  install_framework "Pods-Treecycle/SwiftyJSON.framework"
 fi

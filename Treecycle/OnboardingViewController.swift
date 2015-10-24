@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OnboardingViewController.swift
 //  Treecycle
 //
 //  Created by Shane Rogers on 10/22/15.

@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0B04F407AF3537DF378C80F9 /* Pods_Treecycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9628A9258E3539C32E5DD4C1 /* Pods_Treecycle.framework */; };
+		345C1FD01BD99631005A1FC9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345C1FCF1BD99631005A1FC9 /* PaymentViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		34645A5B1BDC20D1003CC1B1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34645A5A1BDC20D1003CC1B1 /* Login.storyboard */; settings = {ASSET_TAGS = (); }; };
+		34645A5D1BDC20FA003CC1B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34645A5C1BDC20FA003CC1B1 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		34E319FF1BDC13B500353948 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E319FE1BDC13B500353948 /* AuthStore.swift */; settings = {ASSET_TAGS = (); }; };
+		34E31A021BDC143700353948 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E31A011BDC143700353948 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		34E364A51BD98558001BCEB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E364A41BD98558001BCEB2 /* AppDelegate.swift */; };
-		34E364A71BD98558001BCEB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E364A61BD98558001BCEB2 /* ViewController.swift */; };
+		34E364A71BD98558001BCEB2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E364A61BD98558001BCEB2 /* OnboardingViewController.swift */; };
 		34E364AA1BD98558001BCEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E364A81BD98558001BCEB2 /* Main.storyboard */; };
 		34E364AC1BD98558001BCEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34E364AB1BD98558001BCEB2 /* Assets.xcassets */; };
 		34E364AF1BD98558001BCEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E364AD1BD98558001BCEB2 /* LaunchScreen.storyboard */; };
@@ -40,9 +45,15 @@
 
 /* Begin PBXFileReference section */
 		1BFF8C09BE8DA267B43A72AD /* Pods-Treecycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treecycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treecycle/Pods-Treecycle.debug.xcconfig"; sourceTree = "<group>"; };
+		345C1FCF1BD99631005A1FC9 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		345C1FD31BDAEDBA005A1FC9 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		34645A5A1BDC20D1003CC1B1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		34645A5C1BDC20FA003CC1B1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		34E319FE1BDC13B500353948 /* AuthStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
+		34E31A011BDC143700353948 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		34E364A11BD98558001BCEB2 /* Treecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E364A41BD98558001BCEB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34E364A61BD98558001BCEB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34E364A61BD98558001BCEB2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		34E364A91BD98558001BCEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34E364AB1BD98558001BCEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34E364AE1BD98558001BCEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,9 +110,27 @@
 		345C1FCC1BD98D74005A1FC9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				34E364A61BD98558001BCEB2 /* ViewController.swift */,
+				34E364A61BD98558001BCEB2 /* OnboardingViewController.swift */,
+				345C1FCF1BD99631005A1FC9 /* PaymentViewController.swift */,
+				34645A5C1BDC20FA003CC1B1 /* LoginViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		34E319FD1BDC138700353948 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				34E319FE1BDC13B500353948 /* AuthStore.swift */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		34E31A001BDC142200353948 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34E31A011BDC143700353948 /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		34E364981BD98558001BCEB2 = {
@@ -129,6 +158,8 @@
 		34E364A31BD98558001BCEB2 /* Treecycle */ = {
 			isa = PBXGroup;
 			children = (
+				34E31A001BDC142200353948 /* Models */,
+				34E319FD1BDC138700353948 /* Stores */,
 				345C1FCC1BD98D74005A1FC9 /* ViewControllers */,
 				34E364D51BD989B7001BCEB2 /* Support */,
 				34E364D21BD98942001BCEB2 /* Storyboards */,
@@ -136,6 +167,7 @@
 				34E364AB1BD98558001BCEB2 /* Assets.xcassets */,
 				34E364AD1BD98558001BCEB2 /* LaunchScreen.storyboard */,
 				34E364B01BD98558001BCEB2 /* Info.plist */,
+				345C1FD31BDAEDBA005A1FC9 /* bridge.h */,
 			);
 			path = Treecycle;
 			sourceTree = "<group>";
@@ -163,6 +195,7 @@
 			children = (
 				34E364A81BD98558001BCEB2 /* Main.storyboard */,
 				34E364D31BD98956001BCEB2 /* Onboarding.storyboard */,
+				34645A5A1BDC20D1003CC1B1 /* Login.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -294,6 +327,7 @@
 				34E364AF1BD98558001BCEB2 /* LaunchScreen.storyboard in Resources */,
 				34E364AC1BD98558001BCEB2 /* Assets.xcassets in Resources */,
 				34E364AA1BD98558001BCEB2 /* Main.storyboard in Resources */,
+				34645A5B1BDC20D1003CC1B1 /* Login.storyboard in Resources */,
 				34E364D41BD98956001BCEB2 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,8 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34645A5D1BDC20FA003CC1B1 /* LoginViewController.swift in Sources */,
 				34E364DB1BD98A3C001BCEB2 /* Extensions.swift in Sources */,
-				34E364A71BD98558001BCEB2 /* ViewController.swift in Sources */,
+				345C1FD01BD99631005A1FC9 /* PaymentViewController.swift in Sources */,
+				34E319FF1BDC13B500353948 /* AuthStore.swift in Sources */,
+				34E364A71BD98558001BCEB2 /* OnboardingViewController.swift in Sources */,
+				34E31A021BDC143700353948 /* User.swift in Sources */,
 				34E364D71BD989C6001BCEB2 /* Colors.swift in Sources */,
 				34E364A51BD98558001BCEB2 /* AppDelegate.swift in Sources */,
 				34E364D91BD989F7001BCEB2 /* Constants.swift in Sources */,
@@ -517,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = REPL.Treecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/phoenixbox/Dev/ios/phone/treecycle/ios/Treecycle/Treecycle/bridge.h;
 			};
 			name = Debug;
 		};
@@ -530,6 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = REPL.Treecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/phoenixbox/Dev/ios/phone/treecycle/ios/Treecycle/Treecycle/bridge.h;
 			};
 			name = Release;
 		};
