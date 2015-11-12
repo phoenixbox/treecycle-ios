@@ -1,20 +1,69 @@
 PODS:
-  - Alamofire (3.0.1)
+  - Alamofire (3.1.2)
   - AMWaveTransition (0.6.0)
+  - Bolts (1.4.0):
+    - Bolts/AppLinks (= 1.4.0)
+    - Bolts/Tasks (= 1.4.0)
+  - Bolts/AppLinks (1.4.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.4.0)
+  - Cent (4.0.1):
+    - Dollar (~> 4.0.1)
+  - Dollar (4.0.1)
+  - FBSDKCoreKit (4.7.1):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc (= 4.7.1)
+    - FBSDKCoreKit/no-arc (= 4.7.1)
+  - FBSDKCoreKit/arc (4.7.1):
+    - Bolts (~> 1.1)
+  - FBSDKCoreKit/no-arc (4.7.1):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc
+  - FBSDKLoginKit (4.7.1):
+    - FBSDKCoreKit
+  - ReactiveCocoa (4.0.4-alpha-1):
+    - ReactiveCocoa/UI (= 4.0.4-alpha-1)
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/Core (4.0.4-alpha-1):
+    - ReactiveCocoa/no-arc
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/no-arc (4.0.4-alpha-1):
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/UI (4.0.4-alpha-1):
+    - ReactiveCocoa/Core
+    - Result (~> 0.6-beta.1)
+  - Result (0.6.0-beta.6)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - Stripe (6.0.1):
     - Stripe/Core (= 6.0.1)
   - Stripe/Core (6.0.1)
   - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.0)
+  - Alamofire (~> 3.1)
   - AMWaveTransition (~> 0.6)
+  - Cent (~> 4.0)
+  - Dollar (~> 4.0)
+  - FBSDKCoreKit (~> 4.7)
+  - FBSDKLoginKit (~> 4.7)
+  - ReactiveCocoa (= 4.0.4-alpha-1)
+  - SDWebImage (~> 3.7)
   - Stripe (~> 6.0)
   - SwiftyJSON (~> 2.3)
 
 SPEC CHECKSUMS:
-  Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
+  Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
   AMWaveTransition: a00588006f144d289a390aabcfa1fa1e16bb9296
+  Bolts: 0e9bce58b9b9f5e8a7a4d47b16d2fabec289072b
+  Cent: 74e3f5a7e8543317b0724c272d279e8219cbaedb
+  Dollar: a058e2659e0d3261307c12630dbc2fd8e32f80bf
+  FBSDKCoreKit: 9141b70960a37930850370495fe565f4a27ac141
+  FBSDKLoginKit: c11ed3c2833472db3bb4a4aecf27af4a6f69b173
+  ReactiveCocoa: 618a2fc13d4ed80e380aa6fa56547cef43c7341d
+  Result: dc390d0b58f9ec43fcd536f1ebdd130803cc6cbc
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   Stripe: 04f215191702c268b89fe0cdf28dc24a9688a71b
   SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="150" y="96" width="74" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMA-jR-mIy">
@@ -43,10 +43,50 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginButton" destination="fMA-jR-mIy" id="Nq0-6T-o2U"/>
+                        <segue destination="lQ8-QA-2s7" kind="presentation" identifier="oauthSegue" id="xrL-vt-KOq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8y-JS-6bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210.5" y="433.5"/>
+            <point key="canvasLocation" x="246.5" y="433.49999999999994"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="FT0-ES-Q9T">
+            <objects>
+                <viewController id="lQ8-QA-2s7" customClass="OAuthViewController" customModule="Treecycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qYg-RY-qW7"/>
+                        <viewControllerLayoutGuide type="bottom" id="92p-tW-LsM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="vwO-zb-Ie8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59m-xc-uNm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="59m-xc-uNm" secondAttribute="trailing" id="6nk-AE-WFT"/>
+                            <constraint firstItem="59m-xc-uNm" firstAttribute="leading" secondItem="vwO-zb-Ie8" secondAttribute="leading" id="Xx7-AS-A6r"/>
+                            <constraint firstItem="59m-xc-uNm" firstAttribute="top" secondItem="vwO-zb-Ie8" secondAttribute="top" id="k4u-6K-irg"/>
+                            <constraint firstItem="59m-xc-uNm" firstAttribute="bottom" secondItem="92p-tW-LsM" secondAttribute="top" id="vjN-eI-vkF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="59m-xc-uNm" id="H0J-R7-yqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPM-4t-kHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.0625" y="432.57042253521126"/>
         </scene>
     </scenes>
 </document>

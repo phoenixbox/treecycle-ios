@@ -7,3 +7,6 @@
 //
 
 #import <Stripe/Stripe.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "RunMode.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>

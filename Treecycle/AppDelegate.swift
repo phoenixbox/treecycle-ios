@@ -8,6 +8,7 @@
 
 import UIKit
 import Stripe
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,14 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Stripe.setDefaultPublishableKey(Constants.stripePublishableKey())
         
-       Stripe.setDefaultPublishableKey(Constants.stripePublishableKey())
+//        let viewModelServices = ViewModelServices.sharedInstance
+//        let navController = self.window?.rootViewController as! UINavigationController
+//        viewModelServices.navigationController = navController
+
+        
         let authStore = AuthStore.sharedInstance
         let userDefaults = NSUserDefaults.groupUserDefaults()
         
         guard let _ = authStore.user as User? else {
             loadLoginInterface()
-            return true
+            return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         }
         
         if (!userDefaults.boolForKey(Constants.General.OnboardingShown.key())) {
@@ -37,8 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             loadMainInterface()
         }
-
-        return true
+        
+       return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject) -> Bool {
+            return FBSDKApplicationDelegate.sharedInstance().application(
+                application,
+                openURL: url,
+                sourceApplication: sourceApplication,
+                annotation: annotation)
     }
     // Compose the dynamic loading of these Storyboards
     

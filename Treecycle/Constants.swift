@@ -18,6 +18,28 @@ public class Constants {
         return "pk_test_wb9VmhiWW2nSZLP7v7fAmmzk"
     }
     
+    public enum RootURL: Int {
+        case Server
+        case WebAPI
+        
+        public func root() -> String {
+            switch self {
+            case .Server:
+                #if DEBUG
+                    return "http://localhost:8000/v1"
+                #else
+                    return "https://treecycle-server.herokuapp.com"
+                #endif
+            case .WebAPI:
+                #if DEBUG
+                    return "http://localhost:3800"
+                #else
+                    return "https://treecycle.herokuapp.com"
+                #endif
+            }
+        }
+    }
+    
     public enum General: Int {
         case OnboardingShown
         
